@@ -681,11 +681,11 @@ V2=[0.245,0.245,0.406898105,0.454341586,0.491321564,0.522065927,0.548608647,...
 
 S1=1./V1;
 S2=1./V2;
-beta=(1/Vs30-1/0.618)/(1/2.780-1/0.618);
+betavs=(1/Vs30-1/0.618)/(1/2.780-1/0.618);  % Be careful here as "betavs" is not "beta"
 Nh=length(H);
 S(Nh)=zeros();
 for i=1:1:Nh
-    S(i)=(beta)*S1(i)+(1-beta)*S2(i);
+    S(i)=(betavs)*S1(i)+(1-betavs)*S2(i);
 end
 V=1./S;
 
